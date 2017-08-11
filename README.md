@@ -1,6 +1,7 @@
 # OperationCode Frontend
 
 ![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsethbergman%2Foperationcode_frontend.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsethbergman%2Foperationcode_frontend?ref=badge_shield)
 
 This is the repository for the front-end portion of https://operationcode.org.
 
@@ -41,3 +42,6 @@ Want to contribute to this repo? Check out our comprehensive
 
 ## License
 This project is licensed under the terms of the MIT license.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsethbergman%2Foperationcode_frontend.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fsethbergman%2Foperationcode_frontend?ref=badge_large)
