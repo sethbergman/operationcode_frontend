@@ -1,0 +1,34 @@
+{
+  "projectName": "operationcode_frontend",
+  "projectOwner": "OperationCode",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 250,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "sethbergman",
+      "name": "Seth Bergman",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8031689?v=4",
+      "profile": "https://sethbergman.com",
+      "contributions": [
+        "question",
+        "blog",
+        "bug",
+        "code",
+        "design",
+        "doc",
+        "example",
+        "ideas",
+        "infra",
+        "plugin",
+        "review",
+        "test",
+        "tool",
+        "tutorial",
+        "video"
+      ]
+    }
+  ]
+}

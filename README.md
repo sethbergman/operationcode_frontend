@@ -1,8 +1,11 @@
 # OperationCode Frontend
+-------
 
-![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=<badge_key>)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-This is the repository for the front-end portion of https://operationcode.org.
+[![Known Vulnerabilities](https://snyk.io/test/github/sethbergman/operationcode_frontend/badge.svg)](https://snyk.io/test/github/sethbergman/operationcode_frontend)
+
+This is the repository for the front-end portion of [OperationCode](https://operationcode.org).
 
 ## Quick Start
 
@@ -35,9 +38,20 @@ frontend, and running various jobs like inviting new users to slack, or signing 
 https://operationcode.org backend is written in rails and can be viewed at
 https://github.com/OperationCode/operationcode_backend.
 
-## Contribute
+## License
+This project is licensed under the terms of the MIT license.
+
+## Contributing Guide
 Want to contribute to this repo? Check out our comprehensive
 [Contributing Guide](https://github.com/OperationCode/operationcode_frontend/blob/master/CONTRIBUTING.md)
 
-## License
-This project is licensed under the terms of the MIT license.
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars3.githubusercontent.com/u/8031689?v=4" width="250px;"/><br /><sub>Seth Bergman</sub>](https://sethbergman.com)<br />[💬](#question-sethbergman "Answering Questions") [📝](#blog-sethbergman "Blogposts") [🐛](https://github.com/OperationCode/operationcode_frontend/issues?q=author%3Asethbergman "Bug reports") [💻](https://github.com/OperationCode/operationcode_frontend/commits?author=sethbergman "Code") [🎨](#design-sethbergman "Design") [📖](https://github.com/OperationCode/operationcode_frontend/commits?author=sethbergman "Documentation") [💡](#example-sethbergman "Examples") [🤔](#ideas-sethbergman "Ideas, Planning, & Feedback") [🚇](#infra-sethbergman "Infrastructure (Hosting, Build-Tools, etc)") [🔌](#plugin-sethbergman "Plugin/utility libraries") [👀](#review-sethbergman "Reviewed Pull Requests") [⚠️](https://github.com/OperationCode/operationcode_frontend/commits?author=sethbergman "Tests") [🔧](#tool-sethbergman "Tools") [✅](#tutorial-sethbergman "Tutorials") [📹](#video-sethbergman "Videos") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

@@ -1,0 +1,16 @@
+---
+
+machine:
+  node:
+    version: "node7"
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init --recursive
+
+dependencies:
+  override:
+    - yarn
+  post:
+    - yarn install && yarn run build
