@@ -1,13 +1,20 @@
 {
-  "presets": [
-    "env",
-    "react",
-    "stage-0"
-  ],
-  "plugins": [
-    "transform-class-properties",
-    "transform-decorators",
-    "transform-react-constant-elements",
-    "transform-react-inline-elements"
-  ]
+  "env": {
+    "build": {
+      "presets": [
+        ["env", {"modules": true}],
+        "stage-3"
+      ]
+    },
+    "test": {
+      "presets": [
+        "env",
+        "stage-3"
+      ],
+      "plugins": [
+        "istanbul",
+        "rewire"
+      ]
+    }
+  }
 }

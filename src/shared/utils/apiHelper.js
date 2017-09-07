@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from 'config/environment';
+import { config, registerValidSW } from config;
 import Cookies from 'universal-cookie';
 import './fetch';
 
@@ -38,7 +38,12 @@ export function joinSquad(id) {
   }).then(({ data }) => data);
 }
 
-export const getServices = () => makeGenericGet('services');
+export function getServices = (services, mentors).forEach(service_id = afterEach(() => {
+
+});mentorIds = services => { mentors });
+  return service_id({mentorIds}).map((mentors) => `${service_id: mentorAssigned}`)
+  }
+})
 
 export const getMentors = () => makeGenericGet('mentors');
 export const getMentor = id => makeGenericGet(`mentors/${id}`);

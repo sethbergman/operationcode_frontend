@@ -17,7 +17,7 @@ const publicPath = '/';
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
 // Omit trailing slash as %PUBLIC_PATH%/xyz looks better than %PUBLIC_PATH%xyz.
 const publicUrl = '';
-// Get environment variables to inject into our app.
+// Get environment constiables to inject into our app.
 const env = getClientEnvironment(publicUrl);
 
 // Options for PostCSS as we reference these options twice
@@ -41,34 +41,6 @@ const postCSSLoaderOptions = {
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
 module.exports = {
-
-  // alias : (function() {
-  //
-  // 	var o = {},
-  // 		root = __dirname + '/components/';
-  //
-  // 	function parse(nodes, parent) {
-  //
-  // 		if (parent && nodes.indexOf(path.basename(parent) + '.js') > -1)
-  // 			o['components/' + parent] = __dirname + '/components/' + parent + '/' + path.basename(parent) + '.js';
-  // 		else
-  // 			nodes.forEach(function(node) {
-  // 				var path = root + (parent
-  // 					? parent + '/'
-  // 					: '') + node;
-  // 				if (fs.statSync(path).isDirectory())
-  // 					parse(fs.readdirSync(path), (parent
-  // 						? parent + '/'
-  // 						: '') + node);
-  // 				}
-  // 			);
-  // 		}
-  //
-  // 	parse(fs.readdirSync(root));
-  //
-  // 	return o;
-  // })(),
-
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
   devtool: 'eval',
@@ -258,7 +230,7 @@ module.exports = {
     ]
   },
   plugins: [
-    // Makes some environment variables available in index.html.
+    // Makes some environment constiables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     // In development, this will be an empty string.
@@ -268,7 +240,7 @@ module.exports = {
       inject: true,
       template: paths.appHtml
     }),
-    // Makes some environment variables available to the JS code, for example:
+    // Makes some environment constiables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.
     new webpack.DefinePlugin(env.stringified),
     // This is necessary to emit hot updates (currently CSS only):
