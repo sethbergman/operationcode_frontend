@@ -1,0 +1,10 @@
+{
+  "*.{js,jsx}": ["prettier --parser flow --write", "git add"],
+    "linters": {
+        "*.js": [
+            "eslint --fix",
+            "git add"
+        ],
+        ".*rc": "jsonlint"
+    }
+}
