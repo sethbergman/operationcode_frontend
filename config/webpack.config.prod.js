@@ -59,6 +59,78 @@ const postCSSLoaderOptions = {
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
 module.exports = {
+  // Don't attempt to continue if there are any errors.
+  bail: true,
+  // We generate sourcemaps in production. This is slow but gives good results.
+  // You can exclude the *.map files from the build during deployment.
+  devtool: 'source-map',
+  // In production, we only want to load the polyfills and the app code.
+  entry: [require.resolve('./polyfills'), paths.appIndexJs],
+  output: {
+    // The build folder.
+    path: paths.appBuild,
+    // Generated JS file names (with nested folders).
+    // There will be one main bundle, and one file per asynchronous chunk.
+    // We don't currently advertise code splitting but Webpack supports it.
+    filename: 'static/js/[name].[chunkhash:8].js',
+    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+    // We inferred the "public path" (such as / or /my-project) from homepage.
+    publicPath,
+    // Point sourcemap entries to original disk location
+    devtoolModuleFilenameTemplate: info =>
+      path.relative(paths.appSrc, info.absoluteResourcePath)
+  },
+  resolve: {
+    // This allows you to set a fallback for where Webpack should look for modules.
+    // We placed these paths second because we want `node_modules` to "win"
+    // if there are any conflicts. This matches Node resolution mechanism.
+    // https://github.com/facebookincubator/create-react-app/issues/253
+    modules: ['node_modules', paths.appNodeModules, paths.appSrc].concat(
+      // It is guaranteed to exist because we tweak it in `env.js`
+      process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
+    ),
+    // These are the reasonable defaults supported by the Node ecosystem.
+    // We also include JSX as a common component filename extension to support
+    // some tools, although we do not recommend using it, see:
+    // https://github.com/facebookincubator/create-react-app/issues/290
+    extensions: ['.js', '.json', '.jsx'],
+    alias: {
+      // Support React Native Web
+      // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
+      'react-native': 'react-native-web'
+    },
+    plugins: [
+      // Prevents users from importing files from outside of src/ (or node_modules/).
+      // This often causes confusion because we only process files within src/ with babel.
+      // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
+      // please link the files into your node_modules/ and let module-resolution kick in.
+      // Make sure your source files are compiled, as they will not be processed in any way.
+      new ModuleScopePlugin(paths.appSrc)
+    ]
+  },
+  module: {
+    strictExportPresence: true,
+    rules: [
+      // First, run the linter.
+      // It's important to do this before Babel processes the JS.
+      {
+        test: /\.(js|jsx)$/,
+        enforce: 'pre',
+        use: [
+          {
+            options: {
+              formatter: eslintFormatter
+            },
+            loader: require.resolve('eslint-loader')
+          }
+        ],
+        include: paths.appSrc
+      },
+      // ** ADDING/UPDATING LOADERS **
+      // The "file" loader handles all assets unless explicitly excluded.
+      // The `exclude` list *must* be updated with every change to loader extensions.
+      // When adding a new loader, you must add its `test`
+      // as a new entry in the `exclude` list in the "file" loader.
 	// Don't attempt to continue if there are any errors.
 	bail: true,
 	// We generate sourcemaps in production. This is slow but gives good results.
@@ -132,6 +204,7 @@ module.exports = {
 			// The `exclude` list *must* be updated with every change to loader extensions.
 			// When adding a new loader, you must add its `test`
 			// as a new entry in the `exclude` list in the "file" loader.
+
 
 			// "file" loader makes sure those assets end up in the `build` folder.
 			// When you `import` an asset, you get its filename.
