@@ -1,8 +1,12 @@
 {
   "name": "operationcode_frontend",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-links": "^3.2.10",
+    "@storybook/cli": "^3.2.10",
+    "@storybook/react": "^3.2.11",
     "axios": "^0.16.1",
     "classnames": "^2.2.5",
     "dateformat": "^2.0.0",
@@ -15,12 +19,12 @@
     "prop-types": "^15.5.8",
     "query-string": "^4.3.4",
     "rc-progress": "^2.2.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-error-overlay": "^1.0.7",
     "react-ga": "^2.2.0",
     "react-icons": "^2.2.5",
-    "react-modal": "^2.3.2",
+    "react-modal": "^1.7.7",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scroll": "^1.5.4",
@@ -31,7 +35,6 @@
     "universal-cookie": "^2.0.7"
   },
   "devDependencies": {
-    "@kadira/storybook": "^2.21.0",
     "autoprefixer": "7.1.0",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
@@ -116,10 +119,5 @@
       "react-app"
     ]
   },
-  "homepage": "http://frontend.operationcode.org/",
-  "description": "Operation Code Frontend",
-  "main": "server.js",
-  "repository": "https://github.com/OperationCode/operationcode_frontend.git",
-  "author": "Operation Code Frontend Team",
-  "license": "MIT"
+  "homepage": "http://frontend.operationcode.org/"
 }
