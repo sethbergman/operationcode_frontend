@@ -33,7 +33,8 @@
     "react-table": "^6.0.5",
     "react-toastr": "^2.9.5",
     "sinon": "^2.3.2",
-    "universal-cookie": "^2.0.7"
+    "universal-cookie": "^2.0.7",
+    "snyk": "^1.49.5"
   },
   "devDependencies": {
     "autoprefixer": "7.1.0",
@@ -89,7 +90,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "backend": "./bin/run_backend.sh",
-    "validate": "npm ls"
+    "validate": "npm ls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "moduleDirectories": [
@@ -130,5 +133,6 @@
     "fix",
     "format",
     "lint"
-  ]
+  ],
+  "snyk": true
 }
